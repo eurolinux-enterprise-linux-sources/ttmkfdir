@@ -1,7 +1,7 @@
 Summary: Utility to create fonts.scale files for truetype fonts
 Name: ttmkfdir
 Version: 3.0.9
-Release: 41%{?dist}
+Release: 42%{?dist}
 # This is a Red Hat maintained package which is specific to
 # our distribution.  Thus the source is only available from
 # within this srpm.
@@ -21,7 +21,9 @@ Source10: ttmkfdir.1
 License: LGPLv2+
 Group: Applications/System
 BuildRequires: freetype-devel >= 2.0
-BuildRequires: zlib-devel flex
+BuildRequires: flex
+BuildRequires: bzip2-devel
+BuildRequires: zlib-devel
 BuildRequires: libtool
 
 # ttmkfdir used to be in the following packages at one point
@@ -60,6 +62,10 @@ cp -p %{SOURCE10} %{buildroot}%{_mandir}/man1/
 %{_mandir}/man1/ttmkfdir.1.gz
 
 %changelog
+* Thu Aug 02 2014 Pravin Satpute <psatpute@redhat.com> 3.0.9-42
+- Resolves: rh#1125703 ttmkfdir fails to build on arch: ppc64le (Generic build failure)
+- Patch from Peter Robinson <pbrobinson@redhat.com>
+
 * Fri Jan 24 2014 Daniel Mach <dmach@redhat.com> - 3.0.9-41
 - Mass rebuild 2014-01-24
 
