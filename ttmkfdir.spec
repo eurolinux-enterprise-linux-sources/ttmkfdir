@@ -1,7 +1,7 @@
 Summary: Utility to create fonts.scale files for truetype fonts
 Name: ttmkfdir
 Version: 3.0.9
-Release: 39%{?dist}
+Release: 41%{?dist}
 # This is a Red Hat maintained package which is specific to
 # our distribution.  Thus the source is only available from
 # within this srpm.
@@ -60,6 +60,12 @@ cp -p %{SOURCE10} %{buildroot}%{_mandir}/man1/
 %{_mandir}/man1/ttmkfdir.1.gz
 
 %changelog
+* Fri Jan 24 2014 Daniel Mach <dmach@redhat.com> - 3.0.9-41
+- Mass rebuild 2014-01-24
+
+* Fri Dec 27 2013 Daniel Mach <dmach@redhat.com> - 3.0.9-40
+- Mass rebuild 2013-12-27
+
 * Thu Mar 28 2013 Pravin Satpute <psatpute@redhat.com> - 3.0.9-39
 - added manpage (#928684)
 
